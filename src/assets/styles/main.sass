@@ -33,6 +33,11 @@ body
 .content-holder
   width: 300px
   margin: 0 auto
+
+.content-window-holder
+  display: flex
+  border: 1px solid #DCDCDC
+
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
   .content-header-1
     width: 235px
@@ -42,4 +47,33 @@ body
     color: $text-color-2
     font-size: 22px
     text-align: center
+  .content-window-holder
+    height: 150px
+    position: relative
+    padding: 32px 27px
+  .content-window-holder-divider
+    margin-bottom: 14px
+  .content-window-number
+    font-size: 85px
+    font-weight: bold
+    margin-right: 18px
+  .content-window-info-holder
+    display: flex
+    flex-direction: column
+    color: $text-color-2
+  .window-header
+    font-size: 20px
+    font-weight: bold
+    margin: 0 0 8.67px
+  .window-content
+    margin: 0
+    font-weight: 300
+    font-size: 14px
+  .window-content-divider
+    position: absolute
+    bottom: -131px
+    font-size: 200px
+    color: #FFD600
+    transform: rotate(45deg)
+    z-index: 1
 // HomePageContent END
