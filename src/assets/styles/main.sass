@@ -19,6 +19,7 @@ body
 .home-page-header
   width: 100%
   background: #0088D3
+.home-page-header-text
   font-size: 36px
   color: $text-color-1
   // for PC
@@ -27,3 +28,18 @@ body
   .home-page-header
     height: 320px
 // HomePageHeader END
+
+// HomePageContent START
+.content-holder
+  width: 300px
+  margin: 0 auto
+@media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
+  .content-header-1
+    width: 235px
+    height: 126px
+    margin: 0 auto
+    font-weight: bold
+    color: $text-color-2
+    font-size: 22px
+    text-align: center
+// HomePageContent END
