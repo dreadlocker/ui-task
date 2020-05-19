@@ -1,26 +1,29 @@
 <template>
   <div>
-    <HomePageHeader />
-    <HomePageContent />
-    <HomePageFooter />
+    <HomePageHeader
+      :headerText="headerText"
+      class="home-page-header absolutely-centered"
+    />
+    <!-- <HomePageContent /> -->
+    <!-- <HomePageFooter /> -->
   </div>
 </template>
 
 <script>
 import HomePageHeader from './HomePageHeader.vue'
-import HomePageContent from './HomePageContent.vue'
-import HomePageFooter from './HomePageFooter.vue'
+// import HomePageContent from './HomePageContent.vue'
+// import HomePageFooter from './HomePageFooter.vue'
 
 export default {
   name: 'HomePage',
   components: {
     HomePageHeader,
-    HomePageContent,
-    HomePageFooter,
+    // HomePageContent,
+    // HomePageFooter,
   },
   data() {
     return {
-      header: "random WxH",
+      headerText: "random WxH",
       contentHeader1: "3 Easy steps to start trading online",
       content1Windows: [
         [

@@ -1,0 +1,29 @@
+@import "./_variables.sass"
+
+body
+  margin: 0
+  
+// general classes START
+.absolutely-centered
+  display: flex
+  justify-content: center
+  align-items: center
+// general classes END
+
+#app
+  font-family: Roboto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+// HomePageHeader START
+.home-page-header
+  width: 100%
+  background: #0088D3
+  font-size: 36px
+  color: $text-color-1
+  // for PC
+  // font-size: 62px
+@media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
+  .home-page-header
+    height: 320px
+// HomePageHeader END
