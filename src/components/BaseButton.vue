@@ -1,5 +1,6 @@
 <template>
   <button
+    @click.prevent="submit"
     type="submit"
     :class="classes"
     class="btn-lg btn-warning w-100 font-weight-bold"
@@ -17,6 +18,11 @@ export default {
   data() {
     return {
       text: "Invest $5 now",
+    }
+  },
+  methods: {
+    submit() {
+      this.$emit("checkEmail")
     }
   }
 }
