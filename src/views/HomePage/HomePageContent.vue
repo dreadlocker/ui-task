@@ -20,7 +20,7 @@
 
     <BaseForm />
 
-    <BaseButton />
+    <BaseButton :classes="'hidden'" />
 
     <BaseIcon
       v-for="iconSrc in icons"
