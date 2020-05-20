@@ -1,10 +1,7 @@
 <template>
   <div>
     <BasePageHeader />
-    <HomePageContent
-      :stepsHeader="stepsHeader"
-      :tradersHeader="tradersHeader"
-    />
+    <HomePageContent />
     <BasePageFooter />
   </div>
 </template>
@@ -21,11 +18,5 @@ export default {
     HomePageContent,
     BasePageFooter,
   },
-  data() {
-    return {
-      stepsHeader: "3 Easy steps to start trading online",
-      tradersHeader: "See how our traders make more",
-    }
-  }
 }
 </script>

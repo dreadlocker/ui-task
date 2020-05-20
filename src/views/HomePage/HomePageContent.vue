@@ -47,16 +47,6 @@ export default {
     BaseButton,
     BaseIcon,
   },
-  props: {
-    stepsHeader: {
-      type: String,
-      required: true
-    },
-    tradersHeader: {
-      type: String,
-      required: true
-    },
-  },
   computed: {
     lastStepsIndex() {
       return this.steps.length - 1
@@ -67,6 +57,7 @@ export default {
   },
   data() {
     return {
+      stepsHeader: "3 Easy steps to start trading online",
       steps: [
         [
           "Fill your details",
@@ -81,6 +72,7 @@ export default {
           "Choose your assets, click BUY/SELL and make money",
         ],
       ],
+      tradersHeader: "See how our traders make more",
       traders: [
         {
           image: require("@/assets/images/trader1.png"),
