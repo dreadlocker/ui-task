@@ -1,5 +1,10 @@
 <template>
-  <form action="" method="post">
+  <form
+    action=""
+    method="post"
+    class="form"
+    :class="classes"
+  >
     <h1>{{header}}</h1>
     <input type="email" placeholder="Email">
     <BaseButton
@@ -28,6 +33,9 @@ export default {
     buttonText: {
       type: String,
       required:true
+    },
+    classes: {
+      type: String,
     },
   }
 }

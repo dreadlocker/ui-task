@@ -4,6 +4,7 @@
       :headerText="headerText"
       :form="form"
       :buttonText="buttonText"
+      :formClasses="'header-form'"
     />
     <HomePageContent
       :stepsHeader="stepsHeader"

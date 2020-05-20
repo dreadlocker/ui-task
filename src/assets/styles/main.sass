@@ -16,17 +16,15 @@ body
 //   -moz-osx-font-smoothing: grayscale
 
 // // HomePageHeader START
-// .home-page-header
-//   width: 100%
-//   background: #0088D3
-// .home-page-header-text
+.page-header
+  width: 100%
+  background: #0088D3
+// .page-header-text
 //   font-size: 36px
 //   color: $text-color-1
 //   // for PC
 //   // font-size: 62px
 // @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
-//   .home-page-header
-//     height: 320px
 // // HomePageHeader END
 
 // // HomePageContent START
@@ -44,6 +42,12 @@ body
   border: 1px solid $text-color-3
 
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
+  .page-header
+    height: 320px
+  .header-form
+    display: none
+  .btn
+    display: none
   // .content-header-1
   //   width: 235px
   //   height: 126px

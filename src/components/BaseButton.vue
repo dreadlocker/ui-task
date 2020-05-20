@@ -1,5 +1,8 @@
 <template>
-  <button type="submit">{{text}}</button>
+  <button
+    type="submit"
+    class="btn"
+  >{{text}}</button>
 </template>
 
 <script>

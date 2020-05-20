@@ -1,11 +1,12 @@
 <template>
-  <div class="home-page-header absolutely-centered">
-    <h1 class="home-page-header-text">{{headerText}}</h1>
+  <div class="page-header absolutely-centered">
+    <h1 class="page-header-text">{{headerText}}</h1>
     
     <BaseForm
       :header="form.header"
       :emailRegexp="form.emailRegexp"
       :buttonText="buttonText"
+      :classes="formClasses"
     />
   </div>
 </template>
@@ -30,6 +31,9 @@ export default {
     buttonText: {
       type: String,
       required: true
+    },
+    formClasses: {
+      type: String,
     },
   }
 }
