@@ -2,7 +2,7 @@
   <form
     action=""
     method=""
-    class="form mx-auto w-100"
+    class="form mx-auto"
     :class="classes"
   >
     <h1 class="form-header text-center mx-auto">{{header}}</h1>
@@ -15,7 +15,7 @@
       aria-describedby="basic-addon1"
     >
     <div
-      v-if="isEmailWrong"
+      v-if="isEmailCorrect === false"
       class="p-1 mb-2 bg-danger text-white"
     >
       {{wrongEmailMessage}}
@@ -44,19 +44,16 @@ export default {
     return {
       header: "Open an account and start trading online",
       emailRegexp: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
-      email: "",
       wrongEmailMessage: "Email you've entered is wrong.",
-      isEmailWrong: false
+      email: "",
+      isEmailCorrect: null
     }
   },
   methods: {
     checkEmail() {
-      const isEmailCorrect = this.emailRegexp.test(this.email)
-      if (isEmailCorrect) {
-        this.isEmailWrong = false
+      this.isEmailCorrect = this.emailRegexp.test(this.email)
+      if (this.isEmailCorrect) {
         alert("Email is correct.")
-      } else {
-        this.isEmailWrong = true
       }
     }
   }

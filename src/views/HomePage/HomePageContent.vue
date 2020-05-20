@@ -22,36 +22,19 @@
       </div>
     </div>
 
-    <BaseForm />
-
     <BaseButton :classes="'hidden'" />
-
-    <div class="incons-holder content-holder mx-auto d-flex justify-content-between">
-      <BaseIcon
-        v-for="iconSrc in icons"
-        :key="iconSrc"
-        :iconSrc="iconSrc"
-      />
-    </div>
-    
   </div>
 </template>
 
 <script>
 import HomePageStep from './HomePageStep.vue'
 import HomePageTrader from './HomePageTrader.vue'
-import BaseForm from '@/components/BaseForm.vue'
-import BaseButton from '@/components/BaseButton.vue'
-import BaseIcon from '@/components/BaseIcon.vue'
 
 export default {
   name: 'HomePageContent',
   components: {
     HomePageStep,
     HomePageTrader,
-    BaseForm,
-    BaseButton,
-    BaseIcon,
   },
   data() {
     return {
@@ -82,13 +65,6 @@ export default {
           header: "This platfrom is a true revolution ",
           info: "“For me, trading is about mastering a skill and uBanker really helps you develop and improve as a trader. It’s a 5-star service!”",
         },
-      ],
-      icons: [
-        require("@/assets/images/icon1.png"),
-        require("@/assets/images/icon2.png"),
-        require("@/assets/images/icon3.png"),
-        require("@/assets/images/icon4.png"),
-        require("@/assets/images/icon5.png"),
       ],
     }
   }

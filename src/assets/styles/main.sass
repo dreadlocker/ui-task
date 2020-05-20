@@ -15,6 +15,9 @@ body
 //   -webkit-font-smoothing: antialiased
 //   -moz-osx-font-smoothing: grayscale
 
+.home-page-holder
+  position: relative
+
 // // HomePageHeader START
 .page-header
   background: $background-color-1
@@ -45,6 +48,7 @@ body
 
 // BaseForm START
 .form
+  width: 100%
   background-color: $text-color-2
   margin: 50px 0
   padding: 23px 17.5px
@@ -132,3 +136,27 @@ body
   .trader-quote
     font-size: 14px
   
+@media (min-width: $min-pc-width)
+  .page-header-text
+    font-size: 59px
+    line-height: 73px
+
+  .page-header
+    height: $page-header-height
+    position: relative
+  .form
+    height: $page-header-height
+    position: absolute
+    top: 0
+    left: calc( 50% + #{$part-of-page-header-text-width} )
+  .hidden
+    display: block
+    height: 100%
+  .form
+    width: 345px
+    margin: 0
+    position: absolute
+    top: 0
+    right: 50%
+  .page-header-text
+    width: $page-header-text-width
