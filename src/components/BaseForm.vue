@@ -2,11 +2,11 @@
   <form
     action=""
     method="post"
-    class="form"
+    class="form mx-auto w-100"
     :class="classes"
   >
-    <h1>{{header}}</h1>
-    <input type="email" placeholder="Email">
+    <h1 class="form-header text-center mx-auto">{{header}}</h1>
+    <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
     <BaseButton />
   </form>
 </template>

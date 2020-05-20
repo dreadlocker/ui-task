@@ -1,23 +1,25 @@
 <template>
-  <div class="content-holder mx-auto">
-    <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
-    <div>
-      <HomePageStep
-        v-for="(step, index) in steps"
-        :key="step[index]"
-        :step="step"
-        :windowNumber="index + 1"
-      />
-    </div>
+  <div>
+    <div class="content-holder mx-auto">
+      <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
+      <div>
+        <HomePageStep
+          v-for="(step, index) in steps"
+          :key="step[index]"
+          :step="step"
+          :windowNumber="index + 1"
+        />
+      </div>
 
-    <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
-    <div>
-      <HomePageTrader
-        v-for="(trader, index) in traders"
-        :key="trader[index]"
-        :trader="trader"
-        :index="index"
-      />
+      <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
+      <div>
+        <HomePageTrader
+          v-for="(trader, index) in traders"
+          :key="trader[index]"
+          :trader="trader"
+          :index="index"
+        />
+      </div>
     </div>
 
     <BaseForm />

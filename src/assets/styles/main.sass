@@ -17,7 +17,6 @@ body
 
 // // HomePageHeader START
 .page-header
-  width: 100%
   background: #0088D3
 .page-header-text
   font-size: 36px
@@ -29,7 +28,6 @@ body
 // // HomePageContent START
 .content-holder
   width: 300px
-  // margin: 0 auto
 
 .step-holder
   border: 1px solid $text-color-3
@@ -44,6 +42,22 @@ body
   
 .step-info-holder
   color: $text-color-2
+
+// BaseForm START
+.form
+  background-color: $text-color-2
+  margin: 50px 0
+  padding: 23px 17.5px
+.form-header
+  font-size: 22px
+  color: $text-color-1
+  padding: 23px 15px 17px
+.form-control
+  margin: 15px 0
+
+// BaseForm END
+
+
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
   .page-header
     height: 320px
@@ -96,15 +110,4 @@ body
     font-size: 16px
   .trader-quote
     font-size: 14px
-  // .step-info-holder
-  //   display: flex
-  //   flex-direction: column
-  //   color: $text-color-2
-  // .window-header
-  //   font-size: 20px
-  //   font-weight: bold
-  //   margin: 0 0 8.67px
-  // .window-content
-  //   margin: 0
-  //   font-weight: 300
-  //   font-size: 14px
+  

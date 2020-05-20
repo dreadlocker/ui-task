@@ -2,7 +2,7 @@
   <button
     type="submit"
     :class="classes"
-    class="btn"
+    class="btn-lg btn-warning w-100 font-weight-bold"
   >{{text}}</button>
 </template>
 
