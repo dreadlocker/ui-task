@@ -2,7 +2,7 @@
   <div>
     <div class="content-holder mx-auto">
       <div class="content-header d-flex align-items-center justify-content-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
-      <div class="steps-holder">
+      <div class="windows-holder">
         <HomePageStep
           v-for="(step, index) in steps"
           :key="step[index]"
@@ -11,8 +11,8 @@
         />
       </div>
 
-      <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
-      <div>
+      <div class="content-header d-flex align-items-center justify-content-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
+      <div class="windows-holder">
         <HomePageTrader
           v-for="(trader, index) in traders"
           :key="trader[index]"
