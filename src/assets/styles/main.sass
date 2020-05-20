@@ -35,9 +35,12 @@ body
   border: 1px solid $text-color-3
   
 .trader-holder
-  display: flex
-  flex-direction: column
   border: 1px solid $text-color-3
+.trader-image
+  width: 100px
+  height: 100px
+  margin: 28px auto
+  border-radius: 50%
   
 .step-info-holder
   color: $text-color-2
@@ -51,15 +54,23 @@ body
     height: 126px
     color: $text-color-2
     font-size: 22px
+    
+  // $step-holder-height: 160px
+  // $triangle-font-size: 50px
+  // $magic-number-for-top: 8px
+  // $triangle-top: calc( #{$step-holder-height} - (#{$magic-number-for-top} * #{$triangle-font-size / 10px}) )
   .step-holder
+    // height: $step-holder-height
     height: 150px
     position: relative
     padding: 32px 27px
     &::after
       content: "\25E2"
       position: absolute
-      bottom: -71px
+      // top: $triangle-top
+      top: 69px
       left: 111px
+      // font-size: $triangle-font-size
       font-size: 100px
       color: #FFD600
       transform: rotate(45deg)
@@ -78,6 +89,12 @@ body
   .step-header
     font-size: 20px
   .step-content
+    font-size: 14px
+  .trader-header, .trader-quote
+    width: 280px
+  .trader-header
+    font-size: 16px
+  .trader-quote
     font-size: 14px
   // .step-info-holder
   //   display: flex

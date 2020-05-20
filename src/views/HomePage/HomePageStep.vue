@@ -15,7 +15,7 @@ export default {
     step: {
       type: Array,
       required: true,
-      validator: (arr) => arr.length === 2
+      validator: (step) => step.length === 2
     },
     windowNumber: {
       type: Number,
