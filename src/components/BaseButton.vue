@@ -8,10 +8,9 @@
 <script>
 export default {
   name: 'BaseButton',
-  props: {
-    text: {
-      type: String,
-      required: true
+  data() {
+    return {
+      text: "Invest $5 now",
     }
   }
 }

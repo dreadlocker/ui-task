@@ -7,9 +7,7 @@
   >
     <h1>{{header}}</h1>
     <input type="email" placeholder="Email">
-    <BaseButton
-      :text="buttonText"
-    />
+    <BaseButton />
   </form>
 </template>
 
@@ -22,20 +20,21 @@ export default {
     BaseButton
   },
   props: {
-    header: {
-      type: String,
-      required:true
-    },
-    emailRegexp: {
-      type: RegExp,
-      required:true
-    },
-    buttonText: {
-      type: String,
-      required:true
-    },
     classes: {
       type: String,
+    },
+  },
+  data() {
+    return {
+      form: {
+        header: "Open an account and start trading online",
+        emailRegexp: /asd/gi,
+      },
+    }
+  },
+  computed: {
+    header() {
+      return this.form.header
     },
   }
 }

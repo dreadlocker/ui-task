@@ -1,16 +1,9 @@
 <template>
   <div>
-    <BasePageHeader
-      :headerText="headerText"
-      :form="form"
-      :buttonText="buttonText"
-      :formClasses="'header-form'"
-    />
+    <BasePageHeader />
     <HomePageContent
       :stepsHeader="stepsHeader"
       :tradersHeader="tradersHeader"
-      :form="form"
-      :buttonText="buttonText"
     />
     <BasePageFooter />
   </div>
@@ -30,14 +23,8 @@ export default {
   },
   data() {
     return {
-      headerText: "random WxH",
       stepsHeader: "3 Easy steps to start trading online",
       tradersHeader: "See how our traders make more",
-      form: {
-        header: "Open an account and start trading online",
-        emailRegexp: /asd/gi,
-      },
-      buttonText: "Invest $5 now",
     }
   }
 }

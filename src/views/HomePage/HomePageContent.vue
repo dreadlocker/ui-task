@@ -18,15 +18,9 @@
       :lastIndex="lastTradersIndex"
     />
 
-    <BaseForm
-      :header="form.header"
-      :emailRegexp="form.emailRegexp"
-      :buttonText="buttonText"
-    />
+    <BaseForm />
 
-    <BaseButton
-      :text="buttonText"
-    />
+    <BaseButton />
 
     <BaseIcon
       v-for="iconSrc in icons"
@@ -59,14 +53,6 @@ export default {
       required: true
     },
     tradersHeader: {
-      type: String,
-      required: true
-    },
-    form: {
-      type: Object,
-      required: true
-    },
-    buttonText: {
       type: String,
       required: true
     },
