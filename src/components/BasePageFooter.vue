@@ -14,10 +14,12 @@
 <script>
 export default {
   name: 'BasePageFooter',
-  props: {
-    footerInfo: {
-      type: Object,
-      required: true
+  data() {
+    return {
+      footerInfo: {
+        links: ["Privacy Policy", "Contact Us", "Terms and Conditions"],
+        text: "Disclaimer: Contract for differences traded on margin carry a high degree of risk. As such they may not be suitable for all investors. As it can result in loss of some or all invested capital, please seek independent advice and ensure you fully understand the risks associated with trading."
+      }
     }
   }
 }
