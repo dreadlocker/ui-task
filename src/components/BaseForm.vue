@@ -42,23 +42,16 @@ export default {
   },
   data() {
     return {
-      form: {
-        header: "Open an account and start trading online",
-        emailRegexp: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
-      },
+      header: "Open an account and start trading online",
+      emailRegexp: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
       email: "",
       wrongEmailMessage: "Email you've entered is wrong.",
       isEmailWrong: false
     }
   },
-  computed: {
-    header() {
-      return this.form.header
-    },
-  },
   methods: {
     checkEmail() {
-      const isEmailCorrect = this.form.emailRegexp.test(this.email)
+      const isEmailCorrect = this.emailRegexp.test(this.email)
       if (isEmailCorrect) {
         this.isEmailWrong = false
         alert("Email is correct.")
