@@ -1,6 +1,6 @@
 <template>
-  <div class="content-holder">
-    <div class="content-header-1 absolutely-centered">{{stepsHeader}}</div>
+  <div class="content-holder mx-auto">
+    <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
     <BaseStep
       v-for="(step, index) in steps"
       :key="step[index]"
@@ -9,7 +9,7 @@
       :lastIndex="lastStepsIndex"
     />
 
-    <div class="content-header-1 absolutely-centered">{{tradersHeader}}</div>
+    <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
     <BaseTrader
       v-for="(trader, index) in traders"
       :key="trader[index]"
