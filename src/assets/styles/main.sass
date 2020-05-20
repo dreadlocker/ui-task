@@ -80,24 +80,19 @@ body
 // BaseForm END
 
 // BaseIcon START
-.incons-holder
-  margin-bottom: 55px
 // BaseIcon END
 
 // BasePageFooter START
 .footer-holder
-  padding: 37px 15px 0
   background-color: $background-color-2
+
 .footer-links-holder
   line-height: 200%
 .footer-link
-  font-size: 14px
   color: $text-color-4
 .footer-info
   margin: 0
-  font-size: 14px
   line-height: 120%
-  text-align: justify
   color: $text-color-4
 // BasePageFooter END
 
@@ -105,8 +100,10 @@ body
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
   .page-header
     height: 320px
-  .hidden
+  .btn-hidden
     display: none
+  .btn-lg
+    width: 100%
   .content-holder
     width: 300px
   .content-header
@@ -147,6 +144,19 @@ body
     margin: 28px auto
   .trader-holder
     flex-direction: column
+
+  .incons-holder
+    margin-bottom: 55px
+
+  .footer-links-holder
+    flex-direction: column
+  .footer-info
+    font-size: 14px
+    text-align: justify
+  .footer-link
+    font-size: 14px
+  .footer-content-holder
+    padding: 37px 15px 0
   
 @media (min-width: $min-pc-width)
   .page-header-text
@@ -161,9 +171,9 @@ body
     top: 0
     left: calc( 50% + #{$part-of-page-header-text-width} )
     // align-items: center
-  .hidden
-    display: block
-    height: 100%
+  .btn-hidden
+    width: 500px
+    height: 54px
   .form
     width: 345px
     margin: 0
@@ -173,8 +183,9 @@ body
   .page-header-text
     width: $page-header-text-width
 
+  $pc-width: 1170px
   .content-holder
-    width: 1170px
+    width: $pc-width
   .content-header
     font-size: 30px
     height: 104px
@@ -203,3 +214,26 @@ body
   .trader-header, .trader-quote
     font-size: 16px
     text-align: left
+
+  $button-pc-margin-y: 36px
+  .incons-holder
+    width: 395px
+    margin: $button-pc-margin-y 0
+
+  .button-pc-holder
+    width: 100%
+    text-align: center
+    margin: $button-pc-margin-y 0
+
+  .footer-content-holder
+    width: $pc-width
+    padding: 37px 133px 0
+  .footer-links-holder
+    width: 364px
+    justify-content: space-around
+    margin: 0 auto
+  .footer-link
+    font-size: 16px
+  .footer-info
+    font-size: 16px
+    text-align: center

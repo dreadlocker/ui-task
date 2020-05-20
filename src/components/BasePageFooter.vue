@@ -9,19 +9,20 @@
     </div>
 
     <div class="footer-holder">
-      <div class="footer-links-holder mb-4 d-flex flex-column align-items-center">
-        <u
-          v-for="link in footerInfo.links"
-          :key="link"
-        >
-          <a
-            href=""
-            class="footer-link font-weight-light"
-          >{{link}}</a>
-        </u>
+      <div class="footer-content-holder mx-auto">
+        <div class="footer-links-holder mb-4 d-flex align-items-center">
+          <u
+            v-for="link in footerInfo.links"
+            :key="link"
+          >
+            <a
+              href=""
+              class="footer-link font-weight-light"
+            >{{link}}</a>
+          </u>
+        </div>
+        <p class="footer-info pb-4 font-weight-light">{{footerInfo.text}}</p>
       </div>
-
-      <p class="footer-info pb-4 font-weight-light">{{footerInfo.text}}</p>
     </div>
   </div>
 </template>

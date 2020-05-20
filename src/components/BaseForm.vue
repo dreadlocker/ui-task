@@ -2,7 +2,7 @@
   <form
     action=""
     method=""
-    class="form mx-auto"
+    class="form d-flex flex-column justify-content-center mx-auto"
     :class="classes"
   >
     <h1 class="form-header text-center mx-auto">{{header}}</h1>

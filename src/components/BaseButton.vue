@@ -3,7 +3,7 @@
     @click.prevent="submit"
     type="submit"
     :class="classes"
-    class="btn-lg btn-warning w-100 font-weight-bold"
+    class="btn-lg btn-warning font-weight-bold"
   >{{text}}</button>
 </template>
 

@@ -21,18 +21,24 @@
         />
       </div>
     </div>
+    
+    <div class="button-pc-holder mx-auto">
+      <BaseButton :classes="'btn-hidden'" />
+    </div>
   </div>
 </template>
 
 <script>
 import HomePageStep from './HomePageStep.vue'
 import HomePageTrader from './HomePageTrader.vue'
+import BaseButton from "@/components/BaseButton.vue"
 
 export default {
   name: 'HomePageContent',
   components: {
     HomePageStep,
     HomePageTrader,
+    BaseButton,
   },
   data() {
     return {
