@@ -1,5 +1,5 @@
 <template>
-  <div class="step-holder d-flex window-divider">
+  <div class="step-holder d-flex window-divider position-relative">
     <div class="step-number d-flex align-items-center font-weight-bold">{{windowNumber}}</div>
     <div class="step-info-holder d-flex flex-column justify-content-center align-items-left">
       <h2 class="step-header font-weight-bold">{{step[0]}}</h2>

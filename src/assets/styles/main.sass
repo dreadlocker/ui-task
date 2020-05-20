@@ -28,13 +28,12 @@ body
   // font-size: 62px
 // // HomePageHeader END
 
-// // HomePageContent START
-.content-holder
-  width: 300px
 
-.step-holder
-  border: 1px solid $text-color-3
-  
+
+
+// HomePageContent START
+.content-header
+  color: $text-color-2
 .trader-holder
   border: 1px solid $text-color-3
 .trader-image
@@ -42,9 +41,29 @@ body
   height: 100px
   margin: 28px auto
   border-radius: 50%
+// HomePageContent END
   
+// HomePageStep START
+.step-holder
+  border: 1px solid $text-color-3
+  &::after
+    content: "\25E2"
+    position: absolute
+    font-size: 100px
+    color: #FFD600
+    z-index: 1
+  &:last-child
+    &::after
+      content: ""
+.step-number
+  font-size: 85px
+  color: $text-color-2
+  margin-right: 18px
 .step-info-holder
   color: $text-color-2
+.step-header
+  font-size: 20px
+// HomePageStep END
 
 // BaseForm START
 .form
@@ -88,10 +107,11 @@ body
     height: 320px
   .hidden
     display: none
+  .content-holder
+    width: 300px
   .content-header
     width: 235px
     height: 126px
-    color: $text-color-2
     font-size: 22px
     
   // $step-holder-height: 160px
@@ -99,36 +119,22 @@ body
   // $magic-number-for-top: 8px
   // $triangle-top: calc( #{$step-holder-height} - (#{$magic-number-for-top} * #{$triangle-font-size / 10px}) )
   .step-holder
-    // height: $step-holder-height
     height: 150px
+    // height: $step-holder-height
     position: relative
-    padding: 32px 27px
+    padding: 0 27px
     &::after
-      content: "\25E2"
-      position: absolute
       // top: $triangle-top
       top: 69px
       left: 111px
       // font-size: $triangle-font-size
-      font-size: 100px
-      color: #FFD600
       transform: rotate(45deg)
-      z-index: 1
-    &:last-child
-      &::after
-        content: ""
+  .step-content
+    font-size: 14px
   .window-divider
     margin-bottom: 14px
     &:last-child
       margin-bottom: 0
-  .step-number
-    font-size: 85px
-    color: $text-color-2
-    margin-right: 18px
-  .step-header
-    font-size: 20px
-  .step-content
-    font-size: 14px
   .trader-header, .trader-quote
     width: 280px
   .trader-header
@@ -140,7 +146,6 @@ body
   .page-header-text
     font-size: 59px
     line-height: 73px
-
   .page-header
     height: $page-header-height
     position: relative
@@ -160,3 +165,26 @@ body
     right: 50%
   .page-header-text
     width: $page-header-text-width
+
+  .content-holder
+    width: 1170px
+  .content-header
+    font-size: 30px
+    height: 104px
+
+  .steps-holder
+    display: flex
+    justify-content: space-between
+  .step-holder
+    width: 374px
+    height: 194px
+    padding: 0 51px
+    &::after
+      top: 19px
+      left: 325px
+      transform: rotate(-45deg)
+  .step-content
+    font-size: 16px
+
+
+  

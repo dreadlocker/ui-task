@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="content-holder mx-auto">
-      <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
-      <div>
+      <div class="content-header d-flex align-items-center justify-content-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
+      <div class="steps-holder">
         <HomePageStep
           v-for="(step, index) in steps"
           :key="step[index]"
@@ -21,8 +21,6 @@
         />
       </div>
     </div>
-
-    <BaseButton :classes="'hidden'" />
   </div>
 </template>
 
