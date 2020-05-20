@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'BaseStep',
+  name: 'HomePageStep',
   props: {
     step: {
       type: Array,

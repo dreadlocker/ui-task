@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'BaseTrader',
+  name: 'HomePageTrader',
   props: {
     trader: {
       type: Object,

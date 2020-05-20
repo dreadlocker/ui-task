@@ -1,7 +1,7 @@
 <template>
   <div class="content-holder mx-auto">
     <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
-    <BaseStep
+    <HomePageStep
       v-for="(step, index) in steps"
       :key="step[index]"
       :step="step"
@@ -10,7 +10,7 @@
     />
 
     <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
-    <BaseTrader
+    <HomePageTrader
       v-for="(trader, index) in traders"
       :key="trader[index]"
       :trader="trader"
@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import BaseStep from '@/components/BaseStep.vue'
-import BaseTrader from '@/components/BaseTrader.vue'
+import HomePageStep from './HomePageStep.vue'
+import HomePageTrader from './HomePageTrader.vue'
 import BaseForm from '@/components/BaseForm.vue'
 import BaseButton from '@/components/BaseButton.vue'
 import BaseIcon from '@/components/BaseIcon.vue'
@@ -41,8 +41,8 @@ import BaseIcon from '@/components/BaseIcon.vue'
 export default {
   name: 'HomePageContent',
   components: {
-    BaseStep,
-    BaseTrader,
+    HomePageStep,
+    HomePageTrader,
     BaseForm,
     BaseButton,
     BaseIcon,
