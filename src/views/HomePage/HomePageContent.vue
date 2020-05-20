@@ -26,11 +26,13 @@
 
     <BaseButton :classes="'hidden'" />
 
-    <BaseIcon
-      v-for="iconSrc in icons"
-      :key="iconSrc"
-      :iconSrc="iconSrc"
-    />
+    <div class="incons-holder content-holder mx-auto d-flex justify-content-between">
+      <BaseIcon
+        v-for="iconSrc in icons"
+        :key="iconSrc"
+        :iconSrc="iconSrc"
+      />
+    </div>
     
   </div>
 </template>
