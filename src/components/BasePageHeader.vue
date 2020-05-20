@@ -1,5 +1,5 @@
 <template>
-  <div class="page-header absolutely-centered">
+  <div class="page-header d-flex justify-content-center align-items-center">
     <h1 class="page-header-text">{{headerText}}</h1>
     
     <BaseForm
