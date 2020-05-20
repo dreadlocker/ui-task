@@ -3,77 +3,82 @@
 body
   margin: 0
   
-// general classes START
-.absolutely-centered
-  display: flex
-  justify-content: center
-  align-items: center
-// general classes END
+// // general classes START
+// .absolutely-centered
+//   display: flex
+//   justify-content: center
+//   align-items: center
+// // general classes END
 
-#app
-  font-family: Roboto
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
+// #app
+//   font-family: Roboto
+//   -webkit-font-smoothing: antialiased
+//   -moz-osx-font-smoothing: grayscale
 
-// HomePageHeader START
-.home-page-header
-  width: 100%
-  background: #0088D3
-.home-page-header-text
-  font-size: 36px
-  color: $text-color-1
-  // for PC
-  // font-size: 62px
-@media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
-  .home-page-header
-    height: 320px
-// HomePageHeader END
+// // HomePageHeader START
+// .home-page-header
+//   width: 100%
+//   background: #0088D3
+// .home-page-header-text
+//   font-size: 36px
+//   color: $text-color-1
+//   // for PC
+//   // font-size: 62px
+// @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
+//   .home-page-header
+//     height: 320px
+// // HomePageHeader END
 
-// HomePageContent START
+// // HomePageContent START
 .content-holder
   width: 300px
   margin: 0 auto
 
-.content-window-holder
+.step-window-holder
   display: flex
-  border: 1px solid #DCDCDC
+  border: 1px solid $text-color-3
+  
+.trader-window-holder
+  display: flex
+  flex-direction: column
+  border: 1px solid $text-color-3
 
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
-  .content-header-1
-    width: 235px
-    height: 126px
-    margin: 0 auto
-    font-weight: bold
-    color: $text-color-2
-    font-size: 22px
-    text-align: center
-  .content-window-holder
-    height: 150px
+  // .content-header-1
+  //   width: 235px
+  //   height: 126px
+  //   margin: 0 auto
+  //   font-weight: bold
+  //   color: $text-color-2
+  //   font-size: 22px
+  //   text-align: center
+  .step-window-holder
+    // height: 150px
     position: relative
     padding: 32px 27px
-  .content-window-holder-divider
+  .window-divider
     margin-bottom: 14px
-  .content-window-number
-    font-size: 85px
-    font-weight: bold
-    margin-right: 18px
-  .content-window-info-holder
-    display: flex
-    flex-direction: column
-    color: $text-color-2
-  .window-header
-    font-size: 20px
-    font-weight: bold
-    margin: 0 0 8.67px
-  .window-content
-    margin: 0
-    font-weight: 300
-    font-size: 14px
-  .window-content-divider
-    position: absolute
-    bottom: -131px
-    font-size: 200px
-    color: #FFD600
-    transform: rotate(45deg)
-    z-index: 1
+  // .step-window-number
+  //   font-size: 85px
+  //   font-weight: bold
+  //   margin-right: 18px
+  // .step-window-info-holder
+  //   display: flex
+  //   flex-direction: column
+  //   color: $text-color-2
+  // .window-header
+  //   font-size: 20px
+  //   font-weight: bold
+  //   margin: 0 0 8.67px
+  // .window-content
+  //   margin: 0
+  //   font-weight: 300
+  //   font-size: 14px
+  // .divider-arrow
+  //   position: absolute
+  //   bottom: -131px
+  //   font-size: 200px
+  //   color: #FFD600
+  //   transform: rotate(45deg)
+  //   z-index: 1
 // HomePageContent END
