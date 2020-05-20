@@ -1,37 +1,119 @@
 <template>
   <div class="content-holder">
-    <div class="content-header-1 absolutely-centered">{{contentHeader}}</div>
-    <BaseContentWindow
-      v-for="(window, index) in contentWindows"
-      :key="index"
-      :window="window"
+    <div class="content-header-1 absolutely-centered">{{stepsHeader}}</div>
+    <BaseStep
+      v-for="(step, index) in steps"
+      :key="step[index]"
+      :step="step"
       :index="index"
-      :lastIndex="lastIndex"
+      :lastIndex="lastStepsIndex"
     />
+
+    <div class="content-header-1 absolutely-centered">{{tradersHeader}}</div>
+    <BaseTrader
+      v-for="(trader, index) in traders"
+      :key="trader[index]"
+      :trader="trader"
+      :index="index"
+      :lastIndex="lastTradersIndex"
+    />
+
+    <BaseForm
+      :header="form.header"
+      :emailRegexp="form.emailRegexp"
+      :buttonText="buttonText"
+    />
+
+    <BaseButton
+      :text="buttonText"
+    />
+
+    <BaseIcon
+      v-for="iconSrc in icons"
+      :key="iconSrc"
+      :iconSrc="iconSrc"
+    />
+    
   </div>
 </template>
 
 <script>
-import BaseContentWindow from '@/components/BaseContentWindow.vue'
+import BaseStep from '@/components/BaseStep.vue'
+import BaseTrader from '@/components/BaseTrader.vue'
+import BaseForm from '@/components/BaseForm.vue'
+import BaseButton from '@/components/BaseButton.vue'
+import BaseIcon from '@/components/BaseIcon.vue'
 
 export default {
-  name: 'BaseHomePageContent',
+  name: 'HomePageContent',
   components: {
-    BaseContentWindow,
+    BaseStep,
+    BaseTrader,
+    BaseForm,
+    BaseButton,
+    BaseIcon,
   },
   props: {
-    contentHeader: {
+    stepsHeader: {
       type: String,
       required: true
     },
-    contentWindows: {
-      type: Array,
+    tradersHeader: {
+      type: String,
+      required: true
+    },
+    form: {
+      type: Object,
+      required: true
+    },
+    buttonText: {
+      type: String,
       required: true
     },
   },
   computed: {
-    lastIndex() {
-      return this.contentWindows.length - 1
+    lastStepsIndex() {
+      return this.steps.length - 1
+    },
+    lastTradersIndex() {
+      return this.traders.length - 1
+    },
+  },
+  data() {
+    return {
+      steps: [
+        [
+          "Fill your details",
+          "Complete the registration form on this page ",
+        ],
+        [
+          "Deposit $5 to open an account",
+          "Go to the platform, where you make a deposit.",
+        ],
+        [
+          "Make money",
+          "Choose your assets, click BUY/SELL and make money",
+        ],
+      ],
+      traders: [
+        {
+          image: require("@/assets/images/trader1.png"),
+          header: "I started with $5, now I trade with over $1400 a week",
+          info: "“The $5 investment is great because it gives you time to understand the platform and how trading works. I quickly upgraded to $200 and doubled my investment in no time.”",
+        },
+        {
+          image: require("@/assets/images/trader2.png"),
+          header: "This platfrom is a true revolution ",
+          info: "“For me, trading is about mastering a skill and uBanker really helps you develop and improve as a trader. It’s a 5-star service!”",
+        },
+      ],
+      icons: [
+        require("@/assets/images/icon1.png"),
+        require("@/assets/images/icon2.png"),
+        require("@/assets/images/icon3.png"),
+        require("@/assets/images/icon4.png"),
+        require("@/assets/images/icon5.png"),
+      ],
     }
   }
 }
