@@ -1,14 +1,14 @@
 <template>
   <div
     :class="{'window-divider': index < lastIndex}"
-    class="step-window-holder absolutely-centered"
+    class="step-holder d-flex"
   >
-    <div class="step-window-number">{{windowNumber}}</div>
-    <div class="step-window-info-holder">
-      <h2 class="window-header">{{step[0]}}</h2>
-      <h3 class="window-content">{{step[1]}}</h3>
+    <div class="step-number d-flex align-items-center font-weight-bold">{{windowNumber}}</div>
+    <div class="step-info-holder d-flex flex-column justify-content-center align-items-left">
+      <h2 class="step-header font-weight-bold">{{step[0]}}</h2>
+      <h3 class="step-content font-weight-light m-0">{{step[1]}}</h3>
     </div>
-    <div v-if="index < lastIndex" class="divider-arrow">&#9698;</div>
+    <div v-if="index < lastIndex" class="divider-arrow position-absolute ">&#9698;</div>
   </div>
 </template>
 

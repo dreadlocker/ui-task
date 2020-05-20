@@ -1,17 +1,11 @@
 <template>
   <div
     :class="{'window-divider': index < lastIndex}"
-    class="trader-window-holder"
+    class="trader-holder"
   >
     <img :src="trader.image" alt="">
     <div>{{trader.header}}</div>
     <div>{{trader.info}}</div>
-    <!-- <div class="step-window-number">{{windowNumber}}</div>
-    <div class="step-window-info-holder">
-      <h2 class="window-header">{{trader[0]}}</h2>
-      <h3 class="window-content">{{trader[1]}}</h3>
-    </div>
-    <div v-if="index < lastIndex" class="divider-arrow">&#9698;</div> -->
   </div>
 </template>
 
