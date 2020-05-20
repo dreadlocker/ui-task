@@ -1,22 +1,24 @@
 <template>
   <div class="content-holder mx-auto">
     <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
-    <HomePageStep
-      v-for="(step, index) in steps"
-      :key="step[index]"
-      :step="step"
-      :index="index"
-      :lastIndex="lastStepsIndex"
-    />
+    <div>
+      <HomePageStep
+        v-for="(step, index) in steps"
+        :key="step[index]"
+        :step="step"
+        :windowNumber="index + 1"
+      />
+    </div>
 
     <div class="content-header d-flex align-items-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
-    <HomePageTrader
-      v-for="(trader, index) in traders"
-      :key="trader[index]"
-      :trader="trader"
-      :index="index"
-      :lastIndex="lastTradersIndex"
-    />
+    <div>
+      <HomePageTrader
+        v-for="(trader, index) in traders"
+        :key="trader[index]"
+        :trader="trader"
+        :index="index"
+      />
+    </div>
 
     <BaseForm />
 
@@ -46,14 +48,6 @@ export default {
     BaseForm,
     BaseButton,
     BaseIcon,
-  },
-  computed: {
-    lastStepsIndex() {
-      return this.steps.length - 1
-    },
-    lastTradersIndex() {
-      return this.traders.length - 1
-    },
   },
   data() {
     return {

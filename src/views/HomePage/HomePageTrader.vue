@@ -1,8 +1,5 @@
 <template>
-  <div
-    :class="{'window-divider': index < lastIndex}"
-    class="trader-holder"
-  >
+  <div class="trader-holder window-divider">
     <img :src="trader.image" alt="">
     <div>{{trader.header}}</div>
     <div>{{trader.info}}</div>
@@ -18,19 +15,6 @@ export default {
       required: true,
       validator: (arr) => Object.keys(arr).length === 3
     },
-    index: {
-      type: Number,
-      required: true,
-    },
-    lastIndex: {
-      type: Number,
-      required: true,
-    },
   },
-  // computed: {
-  //   windowNumber() {
-  //     return this.index + 1
-  //   }
-  // },
 }
 </script>
