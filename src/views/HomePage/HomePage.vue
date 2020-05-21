@@ -60,7 +60,7 @@ export default {
     submitForm() {
       this.isInputValid = this.emailRegexp.test(this.enteredEmail);
       if (this.isInputValid) {
-        alert("Email is correct.");
+        alert("Thank you.");
       }
     }
   }
