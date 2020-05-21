@@ -1,7 +1,5 @@
 <template>
   <form
-    action=""
-    method=""
     class="form d-flex flex-column justify-content-center mx-auto"
     :class="classes"
   >
