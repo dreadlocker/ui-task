@@ -2,44 +2,15 @@
 
 body
   margin: 0
-  
-// // general classes START
-// .absolutely-centered
-//   display: flex
-//   justify-content: center
-//   align-items: center
-// // general classes END
 
-// #app
-//   font-family: Roboto
-//   -webkit-font-smoothing: antialiased
-//   -moz-osx-font-smoothing: grayscale
-
+// HomePage START
 .home-page-holder
   position: relative
-
-// // HomePageHeader START
-.page-header
-  background: $background-color-1
-.page-header-text
-  font-size: 36px
-  color: $text-color-1
-  // for PC
-  // font-size: 62px
-// // HomePageHeader END
-
-
-
-
+// HomePage END
+  
 // HomePageContent START
 .content-header
   color: $text-color-2
-.trader-holder
-  border: 1px solid $text-color-3
-.trader-image
-  width: 100px
-  height: 100px
-  border-radius: 50%
 // HomePageContent END
   
 // HomePageStep START
@@ -63,6 +34,15 @@ body
 .step-header
   font-size: 20px
 // HomePageStep END
+  
+// HomePageTrader START
+.trader-holder
+  border: 1px solid $text-color-3
+.trader-image
+  width: 100px
+  height: 100px
+  border-radius: 50%
+// HomePageTrader END
 
 // BaseForm START
 .form
@@ -78,14 +58,12 @@ body
 .form-control
   margin: 15px 0
 // BaseForm END
-
-// BaseIcon START
-// BaseIcon END
-
+  
 // BasePageFooter START
+.incons-holder
+  justify-content: space-between
 .footer-holder
   background-color: $background-color-2
-
 .footer-links-holder
   line-height: 200%
 .footer-link
@@ -94,33 +72,32 @@ body
   margin: 0
   line-height: 120%
   color: $text-color-4
-.incons-holder
-  justify-content: space-between
 // BasePageFooter END
+
+// BasePageHeader START
+.page-header
+  background: $background-color-1
+.page-header-text
+  font-size: 36px
+  color: $text-color-1
+// BasePageHeader END
 
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
   .page-header
     height: 320px
-    
-  // $step-holder-height: 160px
-  // $triangle-font-size: 50px
-  // $magic-number-for-top: 8px
-  // $triangle-top: calc( #{$step-holder-height} - (#{$magic-number-for-top} * #{$triangle-font-size / 10px}) )
-
+  .trader-image
+    margin: 28px auto
   .incons-holder
     width: 300px
-
+  .footer-content-holder
+    padding: 37px 15px 0
   .footer-links-holder
     flex-direction: column
+  .footer-link
+    font-size: 14px
   .footer-info
     font-size: 14px
     text-align: justify
-  .footer-link
-    font-size: 14px
-  .footer-content-holder
-    padding: 37px 15px 0
-  .trader-image
-    margin: 28px auto
 
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-pc-width - 1)
   .steps-holder, .traders-holder
@@ -129,6 +106,23 @@ body
     width: 235px
     height: 126px
     font-size: 22px
+  .trader-holder
+    flex-direction: column
+  .trader-header, .trader-quote
+    width: 280px
+    text-align: center
+  .trader-header
+    font-size: 16px
+  .trader-quote
+    font-size: 14px
+  .btn-lg
+    width: 100%
+  .btn-hidden
+    display: none
+  .form-content-holder
+    width:285px
+  .incons-holder
+    margin-bottom: 55px
   .window-divider
     margin-bottom: 14px
     &:last-child
@@ -137,32 +131,12 @@ body
     font-size: 14px
   .step-holder
     height: 150px
-    // height: $step-holder-height
     position: relative
     padding: 0 27px
     &::after
-      // top: $triangle-top
       top: 69px
       left: 111px
-      // font-size: $triangle-font-size
       transform: rotate(45deg)
-  .trader-header, .trader-quote
-    width: 280px
-    text-align: center
-  .trader-header
-    font-size: 16px
-  .trader-quote
-    font-size: 14px
-  .trader-holder
-    flex-direction: column
-  .btn-hidden
-    display: none
-  .btn-lg
-    width: 100%
-  .form-content-holder
-    width:285px
-  .incons-holder
-    margin-bottom: 55px
 
 @media (min-width: $min-tablet-portrait-width) and (max-width: $min-pc-width - 1)
   .page-header
@@ -171,12 +145,12 @@ body
     max-width: $min-tablet-portrait-width
     display: flex
     justify-content: space-evenly
+  .trader-image
+    margin: 15px auto
   .incons-holder
     width: calc( #{$min-tablet-portrait-width} - #{$decrease-width-by} )
   .footer-content-holder
     width: calc( #{$min-tablet-portrait-width} - #{$decrease-width-by} )
-  .trader-image
-    margin: 15px auto
 
 @media (min-width: $min-tablet-portrait-width)
   .footer-links-holder
@@ -190,12 +164,40 @@ body
     text-align: center
 
 @media (min-width: $min-pc-width)
-  .page-header-text
-    font-size: 59px
-    line-height: 73px
   .page-header
     height: $page-header-height
     position: relative
+  .page-header-text
+    font-size: 59px
+    line-height: 73px
+    width: $page-header-text-width
+  .content-holder
+    width: $pc-width
+    justify-content: space-between
+  .content-header
+    font-size: 30px
+    height: 104px
+  .windows-holder
+    display: flex
+    justify-content: space-between
+  .trader-holder
+    width: 575px
+    height: 146px
+  .trader-image
+    margin: 23px
+  .trader-image
+    margin: 24 
+  .trader-info-holder
+    padding: 30px 23px 30px 0
+  .trader-header, .trader-quote
+    font-size: 16px
+    text-align: left
+  .button-pc-holder
+    width: 100%
+    text-align: center
+    margin: $button-pc-margin-y 0
+  .btn-lg
+    width: 100%
   .btn-hidden
     width: 500px
     height: 54px
@@ -206,19 +208,11 @@ body
     position: absolute
     top: 0
     left: calc( 50% + #{$part-of-page-header-text-width} )
-  .page-header-text
-    width: $page-header-text-width
-
-  .content-holder
+  .incons-holder
+    width: 395px
+    margin: $button-pc-margin-y 0
+  .footer-content-holder
     width: $pc-width
-    justify-content: space-between
-  .content-header
-    font-size: 30px
-    height: 104px
-
-  .windows-holder
-    display: flex
-    justify-content: space-between
   .step-holder
     width: 374px
     height: 194px
@@ -229,35 +223,3 @@ body
       transform: rotate(-45deg)
   .step-content
     font-size: 16px
-
-  .trader-image
-    margin: 23px
-  .trader-holder
-    width: 575px
-    height: 146px
-  .trader-info-holder
-    padding: 30px 23px 30px 0
-  .trader-header, .trader-quote
-    font-size: 16px
-    text-align: left
-
-  .incons-holder
-    width: 395px
-    margin: $button-pc-margin-y 0
-
-  .button-pc-holder
-    width: 100%
-    text-align: center
-    margin: $button-pc-margin-y 0
-  .btn-lg
-    width: 100%
-  .btn-hidden
-    width: 500px
-  .footer-content-holder
-    width: $pc-width
-  .incons-holder
-    width: 395px
-  .trader-image
-    margin: 24 
-
-
