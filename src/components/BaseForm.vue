@@ -16,7 +16,7 @@
       <div
         v-if="isInputValid === false"
         class="p-1 mb-2 bg-danger text-white"
-      >{{wrongEmailMessage}}</div>
+      >{{errorMessage}}</div>
 
       <BaseButton
         :onClick="submitForm"
@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       header: "Open an account and start trading online",
-      wrongEmailMessage: "Email you've entered is wrong.",
+      errorMessage: "Email you've entered is wrong.",
     }
   },
 }
