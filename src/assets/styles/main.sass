@@ -172,9 +172,9 @@ body
     display: flex
     justify-content: space-evenly
   .incons-holder
-    width: $min-tablet-portrait-width
+    width: calc( #{$min-tablet-portrait-width} - #{$decrease-width-by} )
   .footer-content-holder
-    width: $min-tablet-portrait-width
+    width: calc( #{$min-tablet-portrait-width} - #{$decrease-width-by} )
 
 @media (min-width: $min-tablet-portrait-width)
   .footer-links-holder
