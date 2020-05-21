@@ -2,7 +2,11 @@
   <div class="home-page-holder">
     <BasePageHeader />
     <HomePageContent />
-    <BaseForm />
+    <BaseForm
+      :isEmailCorrect="isEmailCorrect"
+      :submitForm="submitForm"
+      @email="saveEmail"
+    />
     <BasePageFooter />
   </div>
 </template>
@@ -21,5 +25,23 @@ export default {
     BaseForm,
     BasePageFooter,
   },
+  data() {
+    return {
+      isEmailCorrect: "",
+      emailRegexp: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
+      enteredEmail: "",
+    }
+  },
+  methods: {
+    saveEmail(val) {
+      this.enteredEmail = val
+    },
+    submitForm() {
+      this.isEmailCorrect = this.emailRegexp.test(this.enteredEmail)
+      if (this.isEmailCorrect) {
+        alert("Email is correct.")
+      }
+    }
+  }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <button
-    @click.prevent="submit"
-    type="submit"
+    @click.prevent="onClick"
+    :type="type"
     :class="classes"
     class="btn-lg btn-warning font-weight-bold"
   >{{text}}</button>
@@ -11,8 +11,12 @@
 export default {
   name: 'BaseButton',
   props: {
-    submit: {
+    onClick: {
       type: Function,
+      required: true
+    },
+    type: {
+      type: String,
       required: true
     },
     classes: {

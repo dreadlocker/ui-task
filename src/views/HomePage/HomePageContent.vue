@@ -28,7 +28,8 @@
     
     <div class="button-pc-holder mx-auto">
       <BaseButton
-        :submit="submit"
+        :onClick="goToForm"
+        :type="'button'"
         :classes="'btn-hidden'"
       />
     </div>
@@ -80,7 +81,7 @@ export default {
     }
   },
   methods: {
-    submit() {
+    goToForm() {
       window.scrollTo(0,0);
     }
   }

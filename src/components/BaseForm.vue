@@ -8,7 +8,8 @@
     <div class="form-content-holder mx-auto">
       <h1 class="form-header text-center mx-auto">{{header}}</h1>
       <input
-        v-model="email"
+        v-model="enteredEmail"
+        @input="sendEveryCharToParent()"
         type="email"
         class="form-control"
         placeholder="Email"
@@ -23,9 +24,10 @@
       </div>
 
       <BaseButton
-        @checkEmail="checkEmail"
-        :submit="submit"
+        :onClick="submitForm"
+        :type="'submit'"
       />
+        <!-- @checkEmail="checkEmail" -->
     </div>
   </form>
 </template>
@@ -39,6 +41,14 @@ export default {
     BaseButton
   },
   props: {
+    isEmailCorrect: {
+      type: [Boolean, String],
+      required: true
+    },
+    submitForm: {
+      type: Function,
+      required: true
+    },
     classes: {
       type: String,
     },
@@ -46,21 +56,13 @@ export default {
   data() {
     return {
       header: "Open an account and start trading online",
-      emailRegexp: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
       wrongEmailMessage: "Email you've entered is wrong.",
-      email: "",
-      isEmailCorrect: null
+      enteredEmail: "",
     }
   },
   methods: {
-    checkEmail() {
-      this.isEmailCorrect = this.emailRegexp.test(this.email)
-      if (this.isEmailCorrect) {
-        alert("Email is correct.")
-      }
-    },
-    submit() {
-      this.checkEmail()
+    sendEveryCharToParent() {
+      this.$emit('email', this.enteredEmail)
     }
   }
 }
