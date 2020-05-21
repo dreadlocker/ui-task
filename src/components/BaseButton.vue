@@ -19,14 +19,13 @@ export default {
       type: String,
       required: true
     },
+    text: {
+      type: String,
+      required: true
+    },
     classes: {
       type: String
     },
-  },
-  data() {
-    return {
-      text: "Invest $5 now",
-    }
   },
 }
 </script>

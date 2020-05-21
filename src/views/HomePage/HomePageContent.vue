@@ -30,6 +30,7 @@
       <BaseButton
         :onClick="goToForm"
         :type="'button'"
+        :text="buttonText"
         :classes="'btn-hidden'"
       />
     </div>
@@ -78,6 +79,7 @@ export default {
           info: "“For me, trading is about mastering a skill and uBanker really helps you develop and improve as a trader. It’s a 5-star service!”",
         },
       ],
+      buttonText: "Invest $5 now",
     }
   },
   methods: {

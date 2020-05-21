@@ -19,13 +19,12 @@
       <div
         v-if="isEmailCorrect === false"
         class="p-1 mb-2 bg-danger text-white"
-      >
-        {{wrongEmailMessage}}
-      </div>
+      >{{wrongEmailMessage}}</div>
 
       <BaseButton
         :onClick="submitForm"
         :type="'submit'"
+        :text="buttonText"
       />
         <!-- @checkEmail="checkEmail" -->
     </div>
@@ -47,6 +46,10 @@ export default {
     },
     submitForm: {
       type: Function,
+      required: true
+    },
+    buttonText: {
+      type: String,
       required: true
     },
     classes: {
