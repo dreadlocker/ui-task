@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'HomePageTrader',
+  name: "HomePageTrader",
   props: {
     trader: {
       type: Object,
@@ -22,5 +22,5 @@ export default {
       validator: (trader) => Object.keys(trader).length === 3
     },
   },
-}
+};
 </script>

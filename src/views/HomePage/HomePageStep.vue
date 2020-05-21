@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'HomePageStep',
+  name: "HomePageStep",
   props: {
     step: {
       type: Array,
@@ -22,5 +22,5 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>

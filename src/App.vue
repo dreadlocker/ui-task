@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import HomePage from '@/views/HomePage/HomePage.vue'
+import HomePage from "@/views/HomePage/HomePage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HomePage
   }
-}
+};
 </script>
 
 <style lang="sass">

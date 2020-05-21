@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import BaseButton from "./BaseButton.vue"
-// ARRANGE CSS CLASSES IN MAIN.SASS, RUN ESLINT
+import BaseButton from "./BaseButton.vue";
+
 export default {
-  name: 'BaseForm',
+  name: "BaseForm",
   components: {
     BaseButton
   },
@@ -60,5 +60,5 @@ export default {
       type: String,
     },
   },
-}
+};
 </script>

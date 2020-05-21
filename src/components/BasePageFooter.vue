@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import BaseIcon from '@/components/BaseIcon.vue'
+import BaseIcon from "@/components/BaseIcon.vue";
 
 export default {
-  name: 'BasePageFooter',
+  name: "BasePageFooter",
   components: {
     BaseIcon,
   },
@@ -39,5 +39,5 @@ export default {
       required: true
     },
   }
-}
+};
 </script>

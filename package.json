@@ -34,7 +34,29 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-cond-assign": [
+        "error",
+        "always"
+      ],
+      "no-console": "warn"
+    }
   },
   "browserslist": [
     "> 1%",

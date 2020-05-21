@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'BaseButton',
+  name: "BaseButton",
   props: {
     onClick: {
       type: Function,
@@ -27,5 +27,5 @@ export default {
       type: String
     },
   },
-}
+};
 </script>

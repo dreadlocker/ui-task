@@ -7,12 +7,12 @@
 <script>
 
 export default {
-  name: 'BasePageHeader',
+  name: "BasePageHeader",
   props: {
     text: {
       type: String,
       required: true
     },
   },
-}
+};
 </script>

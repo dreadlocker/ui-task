@@ -18,13 +18,13 @@
 </template>
 
 <script>
-import BasePageHeader from '@/components/BasePageHeader.vue'
-import HomePageContent from './HomePageContent.vue'
-import BaseForm from '@/components/BaseForm.vue'
-import BasePageFooter from '@/components/BasePageFooter.vue'
+import BasePageHeader from "@/components/BasePageHeader.vue";
+import HomePageContent from "./HomePageContent.vue";
+import BaseForm from "@/components/BaseForm.vue";
+import BasePageFooter from "@/components/BasePageFooter.vue";
 
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   components: {
     BasePageHeader,
     HomePageContent,
@@ -51,18 +51,18 @@ export default {
         require("@/assets/images/icon4.png"),
         require("@/assets/images/icon5.png"),
       ],
-    }
+    };
   },
   methods: {
     saveEmail(val) {
-      this.enteredEmail = val
+      this.enteredEmail = val;
     },
     submitForm() {
-      this.isInputValid = this.emailRegexp.test(this.enteredEmail)
+      this.isInputValid = this.emailRegexp.test(this.enteredEmail);
       if (this.isInputValid) {
-        alert("Email is correct.")
+        alert("Email is correct.");
       }
     }
   }
-}
+};
 </script>

@@ -4,12 +4,12 @@
 
 <script>
 export default {
-  name: 'BaseIcon',
+  name: "BaseIcon",
   props: {
     iconSrc: {
       type: String,
       required: true
     }
   }
-}
+};
 </script>

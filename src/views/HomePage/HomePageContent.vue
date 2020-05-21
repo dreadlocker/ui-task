@@ -38,12 +38,12 @@
 </template>
 
 <script>
-import HomePageStep from './HomePageStep.vue'
-import HomePageTrader from './HomePageTrader.vue'
-import BaseButton from "@/components/BaseButton.vue"
+import HomePageStep from "./HomePageStep.vue";
+import HomePageTrader from "./HomePageTrader.vue";
+import BaseButton from "@/components/BaseButton.vue";
 
 export default {
-  name: 'HomePageContent',
+  name: "HomePageContent",
   components: {
     HomePageStep,
     HomePageTrader,
@@ -80,12 +80,12 @@ export default {
         },
       ],
       buttonText: "Invest $5 now",
-    }
+    };
   },
   methods: {
     goToForm() {
       window.scrollTo(0,0);
     }
   }
-}
+};
 </script>
