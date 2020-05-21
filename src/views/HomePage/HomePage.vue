@@ -6,7 +6,7 @@
       :isEmailCorrect="isEmailCorrect"
       :submitForm="submitForm"
       :buttonText="buttonText"
-      @email="saveEmail"
+      @update="saveEmail"
     />
     <BasePageFooter />
   </div>

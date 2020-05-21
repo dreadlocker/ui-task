@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     sendEveryCharToParent() {
-      this.$emit('email', this.enteredEmail)
+      this.$emit('update', this.enteredEmail)
     }
   }
 }
