@@ -17,7 +17,7 @@
         aria-describedby="basic-addon1"
       >
       <div
-        v-if="isEmailCorrect === false"
+        v-if="isInputValid === false"
         class="p-1 mb-2 bg-danger text-white"
       >{{wrongEmailMessage}}</div>
 
@@ -40,7 +40,7 @@ export default {
     BaseButton
   },
   props: {
-    isEmailCorrect: {
+    isInputValid: {
       type: [Boolean, String],
       required: true
     },

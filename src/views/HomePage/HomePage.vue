@@ -3,7 +3,7 @@
     <BasePageHeader />
     <HomePageContent />
     <BaseForm
-      :isEmailCorrect="isEmailCorrect"
+      :isInputValid="isInputValid"
       :submitForm="submitForm"
       :buttonText="buttonText"
       @update="saveEmail"
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      isEmailCorrect: "",
+      isInputValid: "",
       emailRegexp: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
       enteredEmail: "",
       buttonText: "Invest $5 now",
@@ -39,8 +39,8 @@ export default {
       this.enteredEmail = val
     },
     submitForm() {
-      this.isEmailCorrect = this.emailRegexp.test(this.enteredEmail)
-      if (this.isEmailCorrect) {
+      this.isInputValid = this.emailRegexp.test(this.enteredEmail)
+      if (this.isInputValid) {
         alert("Email is correct.")
       }
     }
