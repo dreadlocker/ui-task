@@ -94,27 +94,45 @@ body
   margin: 0
   line-height: 120%
   color: $text-color-4
+.incons-holder
+  justify-content: space-between
 // BasePageFooter END
-
 
 @media (min-width: $min-mobile-portrait-width) and (max-width: $min-tablet-portrait-width - 1)
   .page-header
     height: 320px
-  .btn-hidden
-    display: none
-  .btn-lg
-    width: 100%
-  .content-holder
-    width: 300px
-  .content-header
-    width: 235px
-    height: 126px
-    font-size: 22px
     
   // $step-holder-height: 160px
   // $triangle-font-size: 50px
   // $magic-number-for-top: 8px
   // $triangle-top: calc( #{$step-holder-height} - (#{$magic-number-for-top} * #{$triangle-font-size / 10px}) )
+
+  .incons-holder
+    width: 300px
+
+  .footer-links-holder
+    flex-direction: column
+  .footer-info
+    font-size: 14px
+    text-align: justify
+  .footer-link
+    font-size: 14px
+  .footer-content-holder
+    padding: 37px 15px 0
+
+@media (min-width: $min-mobile-portrait-width) and (max-width: $min-pc-width - 1)
+  .steps-holder, .traders-holder
+    width: 300px
+  .content-header
+    width: 235px
+    height: 126px
+    font-size: 22px
+  .window-divider
+    margin-bottom: 14px
+    &:last-child
+      margin-bottom: 0
+  .step-content
+    font-size: 14px
   .step-holder
     height: 150px
     // height: $step-holder-height
@@ -126,12 +144,8 @@ body
       left: 111px
       // font-size: $triangle-font-size
       transform: rotate(45deg)
-  .step-content
-    font-size: 14px
-  .window-divider
-    margin-bottom: 14px
-    &:last-child
-      margin-bottom: 0
+  .trader-image
+    margin: 28px auto
   .trader-header, .trader-quote
     width: 280px
     text-align: center
@@ -139,25 +153,40 @@ body
     font-size: 16px
   .trader-quote
     font-size: 14px
-    
-  .trader-image
-    margin: 28px auto
   .trader-holder
     flex-direction: column
-
+  .btn-hidden
+    display: none
+  .btn-lg
+    width: 100%
+  .form-content-holder
+    width:285px
   .incons-holder
     margin-bottom: 55px
 
-  .footer-links-holder
-    flex-direction: column
-  .footer-info
-    font-size: 14px
-    text-align: justify
-  .footer-link
-    font-size: 14px
+@media (min-width: $min-tablet-portrait-width) and (max-width: $min-pc-width - 1)
+  .page-header
+    height: 400px
+  .content-holder
+    max-width: $min-tablet-portrait-width
+    display: flex
+    justify-content: space-evenly
+  .incons-holder
+    width: $min-tablet-portrait-width
   .footer-content-holder
-    padding: 37px 15px 0
-  
+    width: $min-tablet-portrait-width
+
+@media (min-width: $min-tablet-portrait-width)
+  .footer-links-holder
+    width: 364px
+    justify-content: space-around
+    margin: 0 auto
+  .footer-link
+    font-size: 16px
+  .footer-info
+    font-size: 16px
+    text-align: center
+
 @media (min-width: $min-pc-width)
   .page-header-text
     font-size: 59px
@@ -165,27 +194,22 @@ body
   .page-header
     height: $page-header-height
     position: relative
-  .form
-    height: $page-header-height
-    position: absolute
-    top: 0
-    left: calc( 50% + #{$part-of-page-header-text-width} )
-    // align-items: center
   .btn-hidden
     width: 500px
     height: 54px
   .form
     width: 345px
+    height: $page-header-height
     margin: 0
     position: absolute
     top: 0
-    right: 50%
+    left: calc( 50% + #{$part-of-page-header-text-width} )
   .page-header-text
     width: $page-header-text-width
 
-  $pc-width: 1170px
   .content-holder
     width: $pc-width
+    justify-content: space-between
   .content-header
     font-size: 30px
     height: 104px
@@ -215,7 +239,6 @@ body
     font-size: 16px
     text-align: left
 
-  $button-pc-margin-y: 36px
   .incons-holder
     width: 395px
     margin: $button-pc-margin-y 0
@@ -224,16 +247,13 @@ body
     width: 100%
     text-align: center
     margin: $button-pc-margin-y 0
-
+  .btn-lg
+    width: 100%
+  .btn-hidden
+    width: 500px
   .footer-content-holder
     width: $pc-width
-    padding: 37px 133px 0
-  .footer-links-holder
-    width: 364px
-    justify-content: space-around
-    margin: 0 auto
-  .footer-link
-    font-size: 16px
-  .footer-info
-    font-size: 16px
-    text-align: center
+  .incons-holder
+    width: 395px
+
+

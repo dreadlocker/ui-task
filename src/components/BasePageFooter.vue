@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="incons-holder content-holder mx-auto d-flex justify-content-between">
+    <div class="incons-holder d-flex mx-auto">
       <BaseIcon
         v-for="iconSrc in icons"
         :key="iconSrc"

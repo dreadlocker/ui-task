@@ -11,19 +11,18 @@
 export default {
   name: 'BaseButton',
   props: {
+    submit: {
+      type: Function,
+      required: true
+    },
     classes: {
       type: String
-    }
+    },
   },
   data() {
     return {
       text: "Invest $5 now",
     }
   },
-  methods: {
-    submit() {
-      this.$emit("checkEmail")
-    }
-  }
 }
 </script>

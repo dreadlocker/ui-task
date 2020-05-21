@@ -1,29 +1,36 @@
 <template>
   <div>
     <div class="content-holder mx-auto">
-      <div class="content-header d-flex align-items-center justify-content-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
-      <div class="windows-holder">
-        <HomePageStep
-          v-for="(step, index) in steps"
-          :key="step[index]"
-          :step="step"
-          :windowNumber="index + 1"
-        />
+      <div class="steps-holder mx-auto">
+        <div class="content-header d-flex align-items-center justify-content-center mx-auto font-weight-bold text-center">{{stepsHeader}}</div>
+        <div class="windows-holder">
+          <HomePageStep
+            v-for="(step, index) in steps"
+            :key="step[index]"
+            :step="step"
+            :windowNumber="index + 1"
+          />
+      </div>
       </div>
 
-      <div class="content-header d-flex align-items-center justify-content-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
-      <div class="windows-holder">
-        <HomePageTrader
-          v-for="(trader, index) in traders"
-          :key="trader[index]"
-          :trader="trader"
-          :index="index"
-        />
+      <div class="traders-holder mx-auto">
+        <div class="content-header d-flex align-items-center justify-content-center mx-auto font-weight-bold text-center">{{tradersHeader}}</div>
+        <div class="windows-holder">
+          <HomePageTrader
+            v-for="(trader, index) in traders"
+            :key="trader[index]"
+            :trader="trader"
+            :index="index"
+          />
+        </div>
       </div>
     </div>
     
     <div class="button-pc-holder mx-auto">
-      <BaseButton :classes="'btn-hidden'" />
+      <BaseButton
+        :submit="submit"
+        :classes="'btn-hidden'"
+      />
     </div>
   </div>
 </template>
@@ -70,6 +77,11 @@ export default {
           info: "“For me, trading is about mastering a skill and uBanker really helps you develop and improve as a trader. It’s a 5-star service!”",
         },
       ],
+    }
+  },
+  methods: {
+    submit() {
+      window.scrollTo(0,0);
     }
   }
 }

@@ -5,25 +5,28 @@
     class="form d-flex flex-column justify-content-center mx-auto"
     :class="classes"
   >
-    <h1 class="form-header text-center mx-auto">{{header}}</h1>
-    <input
-      v-model="email"
-      type="email"
-      class="form-control"
-      placeholder="Email"
-      aria-label="Email"
-      aria-describedby="basic-addon1"
-    >
-    <div
-      v-if="isEmailCorrect === false"
-      class="p-1 mb-2 bg-danger text-white"
-    >
-      {{wrongEmailMessage}}
-    </div>
+    <div class="form-content-holder mx-auto">
+      <h1 class="form-header text-center mx-auto">{{header}}</h1>
+      <input
+        v-model="email"
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        aria-label="Email"
+        aria-describedby="basic-addon1"
+      >
+      <div
+        v-if="isEmailCorrect === false"
+        class="p-1 mb-2 bg-danger text-white"
+      >
+        {{wrongEmailMessage}}
+      </div>
 
-    <BaseButton
-      @checkEmail="checkEmail"
-    />
+      <BaseButton
+        @checkEmail="checkEmail"
+        :submit="submit"
+      />
+    </div>
   </form>
 </template>
 
@@ -55,6 +58,9 @@ export default {
       if (this.isEmailCorrect) {
         alert("Email is correct.")
       }
+    },
+    submit() {
+      this.checkEmail()
     }
   }
 }
