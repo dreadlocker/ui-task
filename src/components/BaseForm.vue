@@ -6,8 +6,7 @@
     <div class="form-content-holder mx-auto">
       <h1 class="form-header text-center mx-auto">{{header}}</h1>
       <input
-        v-model="enteredEmail"
-        @input="sendEveryCharToParent()"
+        @input="$emit('update', $event.target.value)"
         type="email"
         class="form-control"
         placeholder="Email"
@@ -58,13 +57,7 @@ export default {
     return {
       header: "Open an account and start trading online",
       wrongEmailMessage: "Email you've entered is wrong.",
-      enteredEmail: "",
     }
   },
-  methods: {
-    sendEveryCharToParent() {
-      this.$emit('update', this.enteredEmail)
-    }
-  }
 }
 </script>
