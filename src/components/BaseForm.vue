@@ -30,7 +30,7 @@
 
 <script>
 import BaseButton from "./BaseButton.vue"
-// FIX REFACTOR CODE, ARRANGE CSS CLASSES IN MAIN.SASS, RUN ESLINT
+// ARRANGE CSS CLASSES IN MAIN.SASS, RUN ESLINT
 export default {
   name: 'BaseForm',
   components: {
@@ -49,15 +49,17 @@ export default {
       type: String,
       required: true
     },
+    header: {
+      type: String,
+      required: true
+    },
+    errorMessage: {
+      type: String,
+      required: true
+    },
     classes: {
       type: String,
     },
-  },
-  data() {
-    return {
-      header: "Open an account and start trading online",
-      errorMessage: "Email you've entered is wrong.",
-    }
   },
 }
 </script>

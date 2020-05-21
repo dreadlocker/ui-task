@@ -6,6 +6,8 @@
       :isInputValid="isInputValid"
       :submitForm="submitForm"
       :buttonText="buttonText"
+      :header="formHeader"
+      :errorMessage="formErrorMessage"
       @update="saveEmail"
     />
     <BasePageFooter />
@@ -32,6 +34,8 @@ export default {
       emailRegexp: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gi,
       enteredEmail: "",
       buttonText: "Invest $5 now",
+      formHeader: "Open an account and start trading online",
+      formErrorMessage: "Email you've entered is wrong.",
     }
   },
   methods: {
