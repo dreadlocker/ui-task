@@ -10,7 +10,7 @@
             :step="step"
             :windowNumber="index + 1"
           />
-      </div>
+        </div>
       </div>
 
       <div class="traders-holder mx-auto">

@@ -23,7 +23,6 @@
         :type="'submit'"
         :text="buttonText"
       />
-        <!-- @checkEmail="checkEmail" -->
     </div>
   </form>
 </template>
@@ -37,24 +36,24 @@ export default {
     BaseButton
   },
   props: {
+    header: {
+      type: String,
+      required: true
+    },
     isInputValid: {
       type: [Boolean, String],
       required: true
     },
-    submitForm: {
-      type: Function,
+    errorMessage: {
+      type: String,
       required: true
     },
     buttonText: {
       type: String,
       required: true
     },
-    header: {
-      type: String,
-      required: true
-    },
-    errorMessage: {
-      type: String,
+    submitForm: {
+      type: Function,
       required: true
     },
     classes: {

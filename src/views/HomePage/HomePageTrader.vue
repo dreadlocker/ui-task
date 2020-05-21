@@ -3,6 +3,7 @@
     <img
       :src="trader.image"
       class="trader-image"
+      alt="trader"
     >
     <div class="trader-info-holder">
       <h2 class="trader-header font-weight-bold mx-auto">{{trader.header}}</h2>
